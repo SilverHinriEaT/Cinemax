@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Контакти</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+</head>
+
+<body>
+
+<div th:replace="index :: nav"></div>
+
+<div class="container my-2">
+    <div class="card">
+        <div class="card-body">
+            <div class="container my-5">
+
+                <p style="font-size:95%;" class="my-5" align="center">
+                    <b>Адреса:</b></br>
+                    вулиця Політехнічна, 41</br>
+                    Київ, 03056
+                </p>
+
+                <p style="font-size:95%;" class="my-5" align="center">
+                    <b>Контактний телефон: </b> 044 236 79 89
+                </p>
+
+                <img src="/images/registerbackground.jpg" width="70%;" height="60%;">
+
+                <p style="font-size:95%;" class="my-5" align="center"><b>Адміністрація</b></p>
+
+                <b> Ярослав Корнага - посада </b> | kornaga@cinemax.com </br>
+                <b> Олександр Ролік - посада </b> | rolik@cinemax.com </br>
+
+                <b> Ірина Муха - посада </b> | тел. 044 236 79 89 </br>
+                <b> Максим Букасов - крутий </b> | bukasov@cinemax.com </br>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
