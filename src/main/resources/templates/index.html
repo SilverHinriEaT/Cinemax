@@ -19,7 +19,7 @@
     <a th:href="@{'/about'}">Про нас</a>
     <a th:href="@{'/localization'}">Контакти</a>
     <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}"> <a th:href="@{'/movies/showForm'}">Додати фільм</a></div>
-    <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}"><a th:href="@{'console'}">База даних</a></div>
+    <div th:if="${#authorization.expression('hasRole(''ADMIN'')')}"><a th:href="@{'h2-console'}">База даних</a></div>
 
     <div class="test">
         <a sec:authorize="!isAuthenticated()" class="nav-item"><a class="btn btn-outline-light" th:href="@{/register}">Зареєструватися</a></a>

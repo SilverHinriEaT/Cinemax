@@ -39,7 +39,7 @@ class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/movies/delete/*").hasRole("ADMIN")
                 .antMatchers("/movies/add").hasRole("ADMIN")
                 .antMatchers("/movies/admin/*/newRepertoire").hasRole("ADMIN")
-                .antMatchers("/console/*").hasRole("ADMIN")
+                .antMatchers("/h2-console/*").hasRole("ADMIN")
                 .antMatchers("/movies/*/reservation").hasAnyRole("USER", "ADMIN")
                 .antMatchers("/movies/*/reservation/*").hasAnyRole("USER", "ADMIN")
                 .and()

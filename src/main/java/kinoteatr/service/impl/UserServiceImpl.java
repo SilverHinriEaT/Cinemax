@@ -7,20 +7,16 @@ import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import kinoteatr.model.Token;
 import kinoteatr.model.User;
-import kinoteatr.repository.TokenRepository;
 import kinoteatr.repository.UserRepository;
 import kinoteatr.service.UserService;
 
 import java.security.Principal;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
-    private final TokenRepository tokenRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
@@ -62,15 +58,6 @@ public class UserServiceImpl implements UserService {
         userRepository.save(user);
         user.setRole("ROLE_USER");
         user.isEnabled();
-        sendToken(user);
-    }
-
-    private void sendToken(final User user) {
-        final String tokenValue = UUID.randomUUID().toString();
-        final Token token = new Token();
-        token.setValue(tokenValue);
-        token.setUser(user);
-        tokenRepository.save(token);
     }
 
     private boolean userEmailExists(final String email) {
